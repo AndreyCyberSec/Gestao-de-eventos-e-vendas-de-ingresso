@@ -1,0 +1,252 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\objectvalue\\objectsenha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\objectvalue\\objectsenha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\objectvalue\\objectemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\objectvalue\\objectemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\objectvalue\\objectnome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\objectvalue\\objectnome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\entidades\\sessao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\sessao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\enum\\statusdoingresso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\enum\\statusdoingresso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\enum\\statuspagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\enum\\statuspagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\enum\\tipodeingresso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\enum\\tipodeingresso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\enum\\tipodecliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\enum\\tipodecliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\entidades\\sala.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\sala.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\entidades\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\entidades\\ingresso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\ingresso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|c:\\users\\andre\\onedrive\\documentos\\gei\\backend\\domain\\entidades\\pagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05192182-453A-439E-BC26-23B58C270637}|Domain\\Domain.csproj|solutionrelative:domain\\entidades\\pagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ObjectSenha.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\ObjectValue\\ObjectSenha.cs",
+              "RelativeDocumentMoniker": "Domain\\ObjectValue\\ObjectSenha.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\ObjectValue\\ObjectSenha.cs",
+              "RelativeToolTip": "Domain\\ObjectValue\\ObjectSenha.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwBoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T00:08:04.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ObjectEmail.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\ObjectValue\\ObjectEmail.cs",
+              "RelativeDocumentMoniker": "Domain\\ObjectValue\\ObjectEmail.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\ObjectValue\\ObjectEmail.cs",
+              "RelativeToolTip": "Domain\\ObjectValue\\ObjectEmail.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAUwBIAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T00:07:34.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ObjectNome.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\ObjectValue\\ObjectNome.cs",
+              "RelativeDocumentMoniker": "Domain\\ObjectValue\\ObjectNome.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\ObjectValue\\ObjectNome.cs",
+              "RelativeToolTip": "Domain\\ObjectValue\\ObjectNome.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAuwAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T23:51:28.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TipoDeCliente.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Enum\\TipoDeCliente.cs",
+              "RelativeDocumentMoniker": "Domain\\Enum\\TipoDeCliente.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Enum\\TipoDeCliente.cs",
+              "RelativeToolTip": "Domain\\Enum\\TipoDeCliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T23:48:20.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Sala.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Entidades\\Sala.cs",
+              "RelativeDocumentMoniker": "Domain\\Entidades\\Sala.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Entidades\\Sala.cs",
+              "RelativeToolTip": "Domain\\Entidades\\Sala.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T23:46:40.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Sessao.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Entidades\\Sessao.cs",
+              "RelativeDocumentMoniker": "Domain\\Entidades\\Sessao.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Entidades\\Sessao.cs",
+              "RelativeToolTip": "Domain\\Entidades\\Sessao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T23:45:50.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Evento.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Entidades\\Evento.cs",
+              "RelativeDocumentMoniker": "Domain\\Entidades\\Evento.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Entidades\\Evento.cs",
+              "RelativeToolTip": "Domain\\Entidades\\Evento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T23:45:36.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Ingresso.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Entidades\\Ingresso.cs",
+              "RelativeDocumentMoniker": "Domain\\Entidades\\Ingresso.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Entidades\\Ingresso.cs",
+              "RelativeToolTip": "Domain\\Entidades\\Ingresso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T23:45:01.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Pagamento.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Entidades\\Pagamento.cs",
+              "RelativeDocumentMoniker": "Domain\\Entidades\\Pagamento.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Entidades\\Pagamento.cs",
+              "RelativeToolTip": "Domain\\Entidades\\Pagamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T23:44:45.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Entidades\\Cliente.cs",
+              "RelativeDocumentMoniker": "Domain\\Entidades\\Cliente.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Entidades\\Cliente.cs",
+              "RelativeToolTip": "Domain\\Entidades\\Cliente.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAkwA4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T23:44:34.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StatusDoIngresso.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Enum\\StatusDoIngresso.cs",
+              "RelativeDocumentMoniker": "Domain\\Enum\\StatusDoIngresso.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Enum\\StatusDoIngresso.cs",
+              "RelativeToolTip": "Domain\\Enum\\StatusDoIngresso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T23:42:56.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TipoDeIngresso.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Enum\\TipoDeIngresso.cs",
+              "RelativeDocumentMoniker": "Domain\\Enum\\TipoDeIngresso.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Enum\\TipoDeIngresso.cs",
+              "RelativeToolTip": "Domain\\Enum\\TipoDeIngresso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T23:42:17.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StatusPagamento.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Enum\\StatusPagamento.cs",
+              "RelativeDocumentMoniker": "Domain\\Enum\\StatusPagamento.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Enum\\StatusPagamento.cs",
+              "RelativeToolTip": "Domain\\Enum\\StatusPagamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T23:41:29.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Domain.csproj",
+              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\GEI\\BackEnd\\Domain\\Domain.csproj",
+              "RelativeToolTip": "Domain\\Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-07T23:39:50.551Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

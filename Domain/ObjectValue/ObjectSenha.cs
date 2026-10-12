@@ -2,11 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Domain.ObjectValue
 {
      public record ObjectSenha
     {
+        public string Senha { get; init; }
+        public ObjectSenha(string senha)
+        {
+            if (string.IsNullOrWhiteSpace(senha))
+                throw new ArgumentException("A senha não pode ser vazia.", nameof(senha));
+            if (!ValidarSenha(senha))
+                throw new ArgumentException("A senha não é válida. Ela deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas e números.", nameof(senha));
+            this.Senha = senha;
+        }
+        public bool ValidarSenha(string senha)
+        {
+            if (string.IsNullOrWhiteSpace(senha))
+                return false;
+            // Regex para validar a senha
+            string padrao = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$";
+            return Regex.IsMatch(senha, padrao);
+        }
     }
 }

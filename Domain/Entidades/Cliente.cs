@@ -13,8 +13,6 @@ namespace Domain.Entidades
         public ObjectNome Nome { get; private set; }
         public int Idade { get; private set; }
         public ObjectEmail Email { get; private set; }
-        public ObjectTelefone Telefone { get; private set; }
-        public ObjectEndereco Endereco { get; private set; }
         public ObjectSenha Senha { get; private set; } 
 
     }
