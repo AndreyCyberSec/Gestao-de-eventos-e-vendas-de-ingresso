@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Domain.ObjectValue
+namespace Domain.ObjectValue.Cliente
 {
      public record ObjectSenha
     {
@@ -16,7 +16,7 @@ namespace Domain.ObjectValue
                 throw new ArgumentException("A senha não pode ser vazia.", nameof(senha));
             if (!ValidarSenha(senha))
                 throw new ArgumentException("A senha não é válida. Ela deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas e números.", nameof(senha));
-            this.Senha = senha;
+            Senha = senha;
         }
         public bool ValidarSenha(string senha)
         {

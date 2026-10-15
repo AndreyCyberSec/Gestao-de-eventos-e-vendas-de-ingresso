@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.ObjectValue
+namespace Domain.ObjectValue.Cliente
 {
     public record ObjectNome
     {

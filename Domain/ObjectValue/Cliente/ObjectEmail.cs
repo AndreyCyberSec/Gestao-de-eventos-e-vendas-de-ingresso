@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Domain.ObjectValue
+namespace Domain.ObjectValue.Cliente
 {
     public record ObjectEmail
     {

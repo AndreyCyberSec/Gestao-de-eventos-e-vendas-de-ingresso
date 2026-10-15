@@ -1,5 +1,5 @@
 ﻿using Domain.Enum;
-using Domain.ObjectValue;
+using Domain.ObjectValue.Cliente;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,18 +31,20 @@ namespace Domain.Entidades
             StatusCliente = StatusCliente.Ativo;
         }
 
-        public static Cliente CriarCliente(ObjectNome nome, int idade, ObjectEmail email, ObjectSenha senha)
+        public static Cliente CriarCliente(string primeiroNome, string ultimoNome, int idade, ObjectEmail email, ObjectSenha senha)
         {
             if (idade < 18)
                 throw new ArgumentException("O cliente deve ter pelo menos 18 anos.", nameof(idade));
-            return new Cliente(nome, idade, email, senha);
+           var criarNome =  ObjectNome.CreateName(primeiroNome, ultimoNome);
+            return new Cliente(criarNome, idade, email, senha);
         }
 
-        public void AtualizarCliente(ObjectNome nome, int idade)
+        public void AtualizarCliente(string primeiroNome, string ultimoNome, int idade)
         {
             if (idade < 18)
                 throw new ArgumentException("O cliente deve ter pelo menos 18 anos.", nameof(idade));
-            Nome = nome;
+            var criarNome = ObjectNome.CreateName(primeiroNome, ultimoNome);
+            Nome = criarNome;
             Idade = idade;
         }
 
