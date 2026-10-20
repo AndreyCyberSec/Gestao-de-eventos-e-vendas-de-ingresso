@@ -13,7 +13,7 @@ namespace Domain.ObjectValue.Evento
         public string Cidade { get; init; }
         public SiglaEstado Estado { get; init; }
         public string Pais { get; init; }
-        public ObjectLocalEvento(string endereco, string cidade, SiglaEstado estado, string pais)
+        private ObjectLocalEvento(string endereco, string cidade, SiglaEstado estado, string pais)
         {
             if (string.IsNullOrWhiteSpace(endereco))
                 throw new ArgumentException("O endereço não pode ser vazio.", nameof(endereco));

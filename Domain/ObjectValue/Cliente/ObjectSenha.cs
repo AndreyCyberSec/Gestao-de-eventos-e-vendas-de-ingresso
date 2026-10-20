@@ -10,7 +10,7 @@ namespace Domain.ObjectValue.Cliente
      public record ObjectSenha
     {
         public string Senha { get; init; }
-        public ObjectSenha(string senha)
+        private ObjectSenha(string senha)
         {
             if (string.IsNullOrWhiteSpace(senha))
                 throw new ArgumentException("A senha não pode ser vazia.", nameof(senha));
@@ -25,6 +25,11 @@ namespace Domain.ObjectValue.Cliente
             // Regex para validar a senha
             string padrao = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$";
             return Regex.IsMatch(senha, padrao);
+        }
+
+        public static ObjectSenha CreateSenha(string senha)
+        {
+            return new ObjectSenha(senha);
         }
     }
 }

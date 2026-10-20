@@ -10,7 +10,7 @@ namespace Domain.ObjectValue.Cliente
     {
         public string PrimeiroNome { get; init; }
         public string UltimoNome { get; init; }
-        public ObjectNome(string primeiroNome, string ultimoNome)
+        private ObjectNome(string primeiroNome, string ultimoNome)
         {
             if (string.IsNullOrWhiteSpace(primeiroNome))
                 throw new ArgumentException("O primeiro nome não pode ser vazio.", nameof(primeiroNome));

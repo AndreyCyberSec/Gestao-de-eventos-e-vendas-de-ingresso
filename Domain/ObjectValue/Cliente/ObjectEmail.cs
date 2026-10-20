@@ -11,7 +11,7 @@ namespace Domain.ObjectValue.Cliente
     {
         public string corpoEmail { get; init; }
 
-        public ObjectEmail(string corpoEmail)
+        private ObjectEmail(string corpoEmail)
         {
             if (string.IsNullOrWhiteSpace(corpoEmail))
                 throw new ArgumentException("O corpo do email não pode ser vazio.", nameof(corpoEmail));
@@ -29,6 +29,11 @@ namespace Domain.ObjectValue.Cliente
             string padrao = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
             return Regex.IsMatch(email, padrao, RegexOptions.IgnoreCase);
+        }
+
+        public static ObjectEmail CreateEmail(string corpoEmail)
+        {
+            return new ObjectEmail(corpoEmail);
         }
     }
 }

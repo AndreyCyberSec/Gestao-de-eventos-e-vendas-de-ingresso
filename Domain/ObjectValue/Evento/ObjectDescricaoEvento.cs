@@ -9,7 +9,7 @@ namespace Domain.ObjectValue.Evento
     public record ObjectDescricaoEvento
     {
         public string Descricao { get; init; }
-        public ObjectDescricaoEvento(string descricao)
+        private ObjectDescricaoEvento(string descricao)
         {
             if(!ValidarDescricaoEvento(descricao))
                 throw new ArgumentException("A descrição do evento não pode ser nula, vazia ou exceder 500 caracteres.");
@@ -22,6 +22,11 @@ namespace Domain.ObjectValue.Evento
                 return false;
             
             return true;
+        }
+
+        public static ObjectDescricaoEvento CreateDescricaoEvento(string descricao)
+        {
+            return new ObjectDescricaoEvento(descricao);
         }
     }
 }
