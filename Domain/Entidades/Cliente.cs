@@ -11,6 +11,9 @@ namespace Domain.Entidades
     public class Cliente
     {
         public Guid IdCliente { get; private set; }
+       public Guid IdPagamento { get; private set; }
+        public Guid IdSessao { get; private set; }
+        public Guid IdIngresso { get; private set; }
         public ObjectNome Nome { get; private set; }
         public int Idade { get; private set; }
         public ObjectEmail Email { get; private set; }
@@ -20,9 +23,12 @@ namespace Domain.Entidades
 
         protected Cliente() { }
 
-        private Cliente(ObjectNome nome, int idade, ObjectEmail email, ObjectSenha senha)
+        private Cliente(Guid idPagamento,Guid idSessao,Guid idIngresso, ObjectNome nome, int idade, ObjectEmail email, ObjectSenha senha)
         {
             IdCliente = Guid.NewGuid();
+            IdPagamento = idPagamento;
+            IdSessao = idSessao;
+            IdIngresso = idIngresso;
             Nome = nome;
             Idade = idade;
             Email = email;
@@ -31,12 +37,12 @@ namespace Domain.Entidades
             StatusCliente = StatusCliente.Ativo;
         }
 
-        public static Cliente CriarCliente(string primeiroNome, string ultimoNome, int idade, ObjectEmail email, ObjectSenha senha)
+        public static Cliente CriarCliente(Guid idPagamento, Guid idSessao, Guid idIngresso, string primeiroNome, string ultimoNome, int idade, ObjectEmail email, ObjectSenha senha)
         {
             if (idade < 18)
                 throw new ArgumentException("O cliente deve ter pelo menos 18 anos.", nameof(idade));
            var criarNome =  ObjectNome.CreateName(primeiroNome, ultimoNome);
-            return new Cliente(criarNome, idade, email, senha);
+            return new Cliente(idPagamento, idSessao, idIngresso, criarNome, idade, email, senha);
         }
 
         public void AtualizarCliente(string primeiroNome, string ultimoNome, int idade)

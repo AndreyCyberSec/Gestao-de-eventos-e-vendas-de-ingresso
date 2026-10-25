@@ -11,6 +11,9 @@ namespace Domain.Entidades
     public class Evento
     {
         public Guid IdEvento { get; private set; }
+        public Guid IdSessao { get; private set; }
+        public Guid IdSala { get; private set; }
+        public Guid IdIngresso { get; private set; }
         public ObejctNomeEvento NomeEvento { get; private set; }
         public ObjectLocalEvento Endereco { get; private set; }
         public DateTime DataInicioEvento { get; private set; }
@@ -21,9 +24,12 @@ namespace Domain.Entidades
 
         protected Evento() { }
 
-        private Evento(ObejctNomeEvento nomeEvento, ObjectLocalEvento endereco, DateTime dataInicioEvento, DateTime dataFimEvento, ObjectDescricaoEvento descricaoEvento)
+        private Evento(Guid idSessao,Guid Idsala, Guid Idingresso,ObejctNomeEvento nomeEvento, ObjectLocalEvento endereco, DateTime dataInicioEvento, DateTime dataFimEvento, ObjectDescricaoEvento descricaoEvento)
         {
             IdEvento = Guid.NewGuid();
+            IdSessao = idSessao;
+            IdSala = Idsala;
+            IdIngresso = Idingresso;
             NomeEvento = nomeEvento;
             Endereco = endereco;
             DataInicioEvento = dataInicioEvento;
@@ -32,10 +38,10 @@ namespace Domain.Entidades
             StatusEvento = StatusEvento.Disponível;
         }
 
-        public static Evento CreateEvento(ObejctNomeEvento nomeEvento, string endereco,string cidade,SiglaEstado estado, string pais, DateTime dataInicioEvento, DateTime dataFimEvento, ObjectDescricaoEvento descricaoEvento)
+        public static Evento CreateEvento(Guid IdSessao, Guid Idsala,Guid Idingresso,ObejctNomeEvento nomeEvento, string endereco,string cidade,SiglaEstado estado, string pais, DateTime dataInicioEvento, DateTime dataFimEvento, ObjectDescricaoEvento descricaoEvento)
         {
             var localEvento = ObjectLocalEvento.CreateLocalEvento(endereco, cidade, estado, pais);
-            return new Evento(nomeEvento, localEvento, dataInicioEvento, dataFimEvento, descricaoEvento);
+            return new Evento(IdSessao, Idsala, Idingresso, nomeEvento, localEvento, dataInicioEvento, dataFimEvento, descricaoEvento);
         }
 
         public void AtualizarEvento(ObejctNomeEvento nomeEvento, string endereco, string cidade, SiglaEstado estado, string pais, DateTime dataInicioEvento, DateTime dataFimEvento, ObjectDescricaoEvento descricaoEvento)
