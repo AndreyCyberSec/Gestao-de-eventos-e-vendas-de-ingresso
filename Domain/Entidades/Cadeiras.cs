@@ -23,11 +23,19 @@ namespace Domain.Entidades
         }
         public static Cadeiras CreateCadeira(Guid idSessao, string numeroCadeira)
         {
+            if(string.IsNullOrEmpty(numeroCadeira))
+            {
+                throw new ArgumentException("Número da cadeira não pode ser nulo ou vazio.");
+            }
             return new Cadeiras(idSessao, numeroCadeira);
         }
 
         public void ReservarCadeira()
         {
+            if(Status == StatusCadeira.Indisponivel)
+            {
+                throw new InvalidOperationException("Cadeira já está reservada.");
+            }
             Status = StatusCadeira.Indisponivel;
         }
 
