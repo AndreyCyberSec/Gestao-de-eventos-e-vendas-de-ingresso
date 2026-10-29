@@ -15,7 +15,7 @@ namespace Domain.ObjectValue.Evento
         {
             if (string.IsNullOrWhiteSpace(nomeEvento))
                 throw new ArgumentException("O nome do evento não pode ser vazio.", nameof(nomeEvento));
-            if (!ValidarNomeEvento(nomeEvento))
+            if (ValidarNomeEvento(nomeEvento))
             {
                 throw new ArgumentException("O nome do evento não é válido. Deve conter apenas letras.", nameof(nomeEvento));
             }
