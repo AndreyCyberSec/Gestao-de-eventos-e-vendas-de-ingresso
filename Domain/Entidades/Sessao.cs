@@ -16,6 +16,10 @@ namespace Domain.Entidades
         protected Sessao() { }
         private Sessao(Guid idEvento, Guid idSala, DateTime dataHoraInicio, DateTime dataHoraFim)
         {
+            if(idEvento == Guid.Empty) throw new ArgumentException("O ID do evento é obrigatório.", nameof(idEvento));
+            if(idSala == Guid.Empty) throw new ArgumentException("O ID da sala é obrigatório.", nameof(idSala));
+            if(dataHoraFim <= dataHoraInicio) throw new ArgumentException("A data e hora de fim deve ser posterior à data e hora de início.");
+
             IdSessao = Guid.NewGuid();
             IdEvento = idEvento;
             IdSala = idSala;

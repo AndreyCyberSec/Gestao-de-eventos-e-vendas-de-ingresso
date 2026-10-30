@@ -9,6 +9,7 @@ namespace Domain.Enum
     public enum StatusPagamento
     {
         Aprovado,
-        Reprovado
+        Reprovado,
+        Pendente
     }
 }

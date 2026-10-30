@@ -27,25 +27,20 @@ namespace Domain.Entidades
             Status = StatusDoIngresso.Disponivel;
         }
 
-        public static Ingresso CreateIngresso(decimal valor,decimal quantidade, int codigoIngresso, TipoDeIngresso tipoDeingresso)
+        public static Ingresso CreateIngresso(decimal valor, int codigoIngresso, TipoDeIngresso tipoDeingresso)
         {
-            var preco = ObjectValor.CreateValor(valor, quantidade);
+            var preco = ObjectValor.CreateValor(valor);
             return new Ingresso(preco, codigoIngresso, tipoDeingresso);
         }
 
-        public void AtualizarPreco(decimal valor, decimal quantidade)
+        public void AtualizarPreco(decimal valor)
         {
-            Preco = ObjectValor.CreateValor(valor, quantidade);
-        }
-        public void Multiplicar(int fator)
-        {
-            if (fator < 0)
-                throw new ArgumentException("O fator de multiplicação não pode ser negativo.");
-            Preco = ObjectValor.CreateValor(Preco.Valor * fator, Preco.Quantidade * fator);
+            Preco = ObjectValor.CreateValor(valor);
         }
         public void IngressoIndisponivel()
         {
             Status = StatusDoIngresso.Indisponivel;
         }
+        
     }
 }

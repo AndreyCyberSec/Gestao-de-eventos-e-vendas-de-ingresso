@@ -14,7 +14,7 @@ namespace Domain.Entidades
         public int Capacidade { get; private set; } = 10;
         public List<Sessao> Sessoes { get; private set; } = new List<Sessao>();
         public List<Evento> Eventos { get; private set; } = new List<Evento>();
-        public List<Cadeiras> CadeirasDisponiveis { get; private set;}
+        public List<Cadeiras> CadeirasDisponiveis { get; private set;} = new List<Cadeiras>();
 
         public StatusSala Status { get; private set; } = StatusSala.Disponivel;
 
@@ -22,6 +22,9 @@ namespace Domain.Entidades
 
         private Sala(int numeroSala, int capacidade)
         {
+            RegrasNumeroSala(numeroSala);
+            RegrasCapacidade(capacidade);
+
             IdSala = Guid.NewGuid();
             NumeroSala = numeroSala;
             Capacidade = capacidade;
@@ -30,9 +33,6 @@ namespace Domain.Entidades
 
         public static Sala CreateSala(int numeroSala, int capacidade)
         {
-            var sala = new Sala();
-            sala.RegrasNumeroSala(numeroSala);
-            sala.RegrasCapacidade(capacidade);
             return new Sala(numeroSala, capacidade);
         }
 
@@ -56,32 +56,54 @@ namespace Domain.Entidades
 
         public void AdicionarCadeira(Cadeiras cadeira)
         {
-            var cadeiraExistente = CadeirasDisponiveis.FirstOrDefault(c => c.NumeroCadeira == cadeira.NumeroCadeira);
-            var cadeirasNaSala = CadeirasDisponiveis.Count;
-            var cadeirasReservadas = CadeirasDisponiveis.Count(c => c.Status == StatusCadeira.Indisponivel);
-            if (cadeiraExistente != null)
+            if(cadeira == null)
             {
-                throw new ArgumentException($"A cadeira {cadeira.NumeroCadeira} já existe na sala.");
+                throw new ArgumentNullException(nameof(cadeira), "A cadeira não pode ser nula.");
             }
-            if (cadeirasNaSala >= Capacidade)
+
+            bool cadeiraJaReservada = CadeirasDisponiveis.Any(c => c.NumeroCadeira == cadeira.NumeroCadeira);
+
+            if(cadeiraJaReservada)
             {
-                throw new ArgumentException("A sala já atingiu sua capacidade máxima de cadeiras.");
+                throw new InvalidOperationException($"A cadeira {cadeira.NumeroCadeira} já está reservada.");
             }
-            if(cadeirasReservadas == Capacidade)
+            if(CadeirasDisponiveis.Count >= Capacidade)
             {
-                throw new ArgumentException("Todas as cadeiras da sala estão reservadas.");
+                throw new InvalidOperationException("A sala atingiu sua capacidade máxima de cadeiras.");
             }
-            
+
             CadeirasDisponiveis.Add(cadeira);
         }
 
         public void AdicionarEvento(Evento evento)
         {
+            if (evento == null)
+            {
+                throw new ArgumentNullException(nameof(evento), "O evento não pode ser nulo.");
+            }
+            if(Eventos.Any(e => e.IdEvento == evento.IdEvento))
+            {
+                throw new InvalidOperationException($"O evento {evento.NomeEvento} já está associado a esta sala.");
+            }
             Eventos.Add(evento);
         }
 
         public void AdicionarSessao(Sessao sessao)
         {
+            if (sessao == null)
+            {
+                throw new ArgumentNullException(nameof(sessao), "A sessão não pode ser nula.");
+            }
+            if(Sessoes.Any(s => s.IdSessao == sessao.IdSessao))
+            {
+                throw new InvalidOperationException($"A sessão já está associada a esta sala.");
+            }
+
+            bool sessaoConflitante = Sessoes.Any(s => (sessao.DataHoraInicio < s.DataHoraFim && sessao.DataHoraFim > s.DataHoraInicio));
+            if(sessaoConflitante)
+            {
+                throw new InvalidOperationException("A sessão conflita com outra sessão existente na sala.");
+            }
             Sessoes.Add(sessao);
         }
 

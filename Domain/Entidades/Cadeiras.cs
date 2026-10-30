@@ -27,7 +27,9 @@ namespace Domain.Entidades
             {
                 throw new ArgumentException("Número da cadeira não pode ser nulo ou vazio.");
             }
+            
             return new Cadeiras(idSessao, numeroCadeira);
+           
         }
 
         public void ReservarCadeira()
