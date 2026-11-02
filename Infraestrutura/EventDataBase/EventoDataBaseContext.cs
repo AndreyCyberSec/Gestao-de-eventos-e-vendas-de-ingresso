@@ -26,7 +26,10 @@ namespace Infraestrutura.EventDataBase
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            
+
+            // Aplica todas as configurações de entidade do assembly atual que implementam IEntityTypeConfiguration<T>
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(EventoDataBaseContext).Assembly);
+
         }
 
     }

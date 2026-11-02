@@ -9,14 +9,14 @@ namespace Domain.ObjectValue.Cliente
 {
      public record ObjectSenha
     {
-        public string Senha { get; init; }
-        private ObjectSenha(string senha)
+        public string Hash { get; init; }
+        private ObjectSenha(string hash)
         {
-            if (string.IsNullOrWhiteSpace(senha))
-                throw new ArgumentException("A senha não pode ser vazia.", nameof(senha));
-            if (!ValidarSenha(senha))
-                throw new ArgumentException("A senha não é válida. Ela deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas e números.", nameof(senha));
-            Senha = senha;
+            if (string.IsNullOrWhiteSpace(hash))
+                throw new ArgumentException("A senha não pode ser vazia.", nameof(hash));
+            if (!ValidarSenha(hash))
+                throw new ArgumentException("A senha não é válida. Ela deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas e números.", nameof(hash));
+            Hash = hash;
         }
         public bool ValidarSenha(string senha)
         {
@@ -27,9 +27,9 @@ namespace Domain.ObjectValue.Cliente
             return Regex.IsMatch(senha, padrao);
         }
 
-        public static ObjectSenha CreateSenha(string senha)
+        public static ObjectSenha CriarComHash(string hash)
         {
-            return new ObjectSenha(senha);
+            return new ObjectSenha(hash);
         }
     }
 }

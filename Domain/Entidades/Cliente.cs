@@ -37,7 +37,7 @@ namespace Domain.Entidades
                 throw new ArgumentException("O cliente deve ter pelo menos 18 anos.", nameof(idade));
            var criarNome =  ObjectNome.CreateName(primeiroNome, ultimoNome);
             var criarEmail= ObjectEmail.CreateEmail(email);
-            var criarSenha = ObjectSenha.CreateSenha(senha);
+            var criarSenha = ObjectSenha.CriarComHash(senha);
             return new Cliente(criarNome, idade, criarEmail, criarSenha);
         }
 
@@ -52,7 +52,7 @@ namespace Domain.Entidades
 
         public void RedefinirSenha(string senha)
         {
-            var novaSenha = ObjectSenha.CreateSenha(senha);
+            var novaSenha = ObjectSenha.CriarComHash(senha);
             Senha = novaSenha;
         }
         public void PromoverParaAdministrador()

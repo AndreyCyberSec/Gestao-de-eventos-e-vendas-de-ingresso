@@ -19,7 +19,7 @@ namespace TestesUnitarios.Entidades
             Assert.Equal("Santos", cliente1.Nome.UltimoNome);
             Assert.Equal(30, cliente1.Idade);
             Assert.Equal("joao@gmail.com", cliente1.Email.corpoEmail);
-            Assert.Equal("J@ao5921", cliente1.Senha.Senha);
+            Assert.Equal("J@ao5921", cliente1.Senha.Hash);
             Assert.Equal(TipoDeCliente.Comum, cliente1.TipoDeCliente);
             Assert.Equal(StatusCliente.Ativo, cliente1.StatusCliente);
         }
@@ -37,7 +37,7 @@ namespace TestesUnitarios.Entidades
         {
             var cliente1 = Cliente.CriarCliente("João", "Santos", 30, "joao@gmail.com", "J@ao5921");
             cliente1.RedefinirSenha("NovaSenha@123");
-            Assert.Equal("NovaSenha@123", cliente1.Senha.Senha);
+            Assert.Equal("NovaSenha@123", cliente1.Senha.Hash);
         }
         [Fact]
         public void TestarPromocaoParaAdministrador()
