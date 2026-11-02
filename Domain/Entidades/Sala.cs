@@ -104,6 +104,11 @@ namespace Domain.Entidades
             {
                 throw new InvalidOperationException("A sessão conflita com outra sessão existente na sala.");
             }
+            if (!Eventos.Any(e => e.IdEvento == sessao.IdEvento))
+            {
+                throw new InvalidOperationException(
+                    "Este evento não está associado a esta sala.");
+            }
             Sessoes.Add(sessao);
         }
 

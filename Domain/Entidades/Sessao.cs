@@ -13,6 +13,8 @@ namespace Domain.Entidades
         public Guid IdSala { get; private set; }
         public DateTime DataHoraInicio { get; private set; }
         public DateTime DataHoraFim { get; private set; }
+        public Sala Sala { get; private set; }
+        public Evento Evento { get; private set; }
         protected Sessao() { }
         private Sessao(Guid idEvento, Guid idSala, DateTime dataHoraInicio, DateTime dataHoraFim)
         {
