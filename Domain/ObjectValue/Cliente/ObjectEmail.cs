@@ -9,7 +9,7 @@ namespace Domain.ObjectValue.Cliente
 {
     public record ObjectEmail
     {
-        public string corpoEmail { get; init; }
+        public string CorpoEmail { get; init; }
 
         private ObjectEmail(string corpoEmail)
         {
@@ -17,7 +17,7 @@ namespace Domain.ObjectValue.Cliente
                 throw new ArgumentException("O corpo do email não pode ser vazio.", nameof(corpoEmail));
             if (!ValidarEmail(corpoEmail))
                 throw new ArgumentException("O corpo do email não é válido.", nameof(corpoEmail));
-            this.corpoEmail = corpoEmail;
+            CorpoEmail = corpoEmail;
         }
 
         public bool ValidarEmail(string email)

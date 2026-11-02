@@ -30,7 +30,7 @@ namespace Infraestrutura.EntityConfiguration
                 .WithOne(c=>c.Sala)
                 .HasForeignKey(c => c.IdSala)
                 .OnDelete(DeleteBehavior.Restrict);
-            builder.Property(s => s.Status).HasConversion<int>().IsRequired();
+            builder.Property(s => s.Status).HasConversion<string>().HasMaxLength(20).IsRequired();
         }
     }
 }

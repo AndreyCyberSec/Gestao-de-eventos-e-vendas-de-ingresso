@@ -21,7 +21,8 @@ namespace Infraestrutura.EntityConfiguration
                     .IsRequired()
                     .HasMaxLength(10);
             builder.Property(s => s.Status)
-                    .HasConversion<int>()
+                    .HasConversion<string>()
+                    .HasMaxLength(20)
                     .IsRequired();
         }
     }

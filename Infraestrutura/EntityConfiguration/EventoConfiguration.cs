@@ -34,6 +34,7 @@ namespace Infraestrutura.EntityConfiguration
                     .IsRequired();
                 endereco.Property(e => e.Estado)
                     .HasColumnName("Estado")
+                    .HasConversion<string>()
                     .HasMaxLength(2)
                     .IsRequired();
                 endereco.Property(e => e.Pais)
@@ -54,7 +55,8 @@ namespace Infraestrutura.EntityConfiguration
             });
 
             builder.Property(e => e.StatusEvento)
-                .HasConversion<int>()
+                .HasConversion<string>()
+                .HasMaxLength(15)
                 .IsRequired();
         }
     }

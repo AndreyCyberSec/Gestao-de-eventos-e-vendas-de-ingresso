@@ -1,0 +1,14 @@
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\bin\Debug\net8.0\Aplicacao.deps.json
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\bin\Debug\net8.0\Aplicacao.runtimeconfig.json
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\bin\Debug\net8.0\Aplicacao.dll
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\bin\Debug\net8.0\Aplicacao.pdb
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\Aplicacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\Aplicacao.AssemblyInfoInputs.cache
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\Aplicacao.AssemblyInfo.cs
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\Aplicacao.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\Aplicacao.sourcelink.json
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\Aplicacao.dll
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\refint\Aplicacao.dll
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\Aplicacao.pdb
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\Aplicacao.genruntimeconfig.cache
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\ref\Aplicacao.dll

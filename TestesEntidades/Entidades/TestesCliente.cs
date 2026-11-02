@@ -18,7 +18,7 @@ namespace TestesUnitarios.Entidades
             Assert.Equal("João", cliente1.Nome.PrimeiroNome);
             Assert.Equal("Santos", cliente1.Nome.UltimoNome);
             Assert.Equal(30, cliente1.Idade);
-            Assert.Equal("joao@gmail.com", cliente1.Email.corpoEmail);
+            Assert.Equal("joao@gmail.com", cliente1.Email.CorpoEmail);
             Assert.Equal("J@ao5921", cliente1.Senha.Hash);
             Assert.Equal(TipoDeCliente.Comum, cliente1.TipoDeCliente);
             Assert.Equal(StatusCliente.Ativo, cliente1.StatusCliente);

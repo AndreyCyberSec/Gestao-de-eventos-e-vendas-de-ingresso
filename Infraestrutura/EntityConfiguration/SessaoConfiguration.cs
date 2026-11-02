@@ -25,6 +25,9 @@ namespace Infraestrutura.EntityConfiguration
                 .HasForeignKey(s => s.IdSala)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            builder.Property(d=>d.DataHoraInicio).IsRequired();
+            builder.Property(d => d.DataHoraFim).IsRequired();
+
 
         }
     }

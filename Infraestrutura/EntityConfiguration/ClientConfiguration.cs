@@ -26,10 +26,12 @@ namespace Infraestrutura.EntityConfiguration
                 .IsRequired();
             //definindo os enums
             builder.Property(c => c.TipoDeCliente)
-                .HasConversion<int>()
+                .HasConversion<string>()
+                .HasMaxLength(15)
                 .IsRequired();
             builder.Property(c => c.StatusCliente)
-                .HasConversion<int>()
+                .HasConversion<string>()
+                .HasMaxLength(20)
                 .IsRequired();
             //definindo os objetos de valor como propriedades obrigatórias
             builder.OwnsOne(c => c.Nome, n =>
@@ -45,11 +47,13 @@ namespace Infraestrutura.EntityConfiguration
             });
             builder.OwnsOne(c => c.Email, e =>
             {
-                e.Property(e => e.corpoEmail)
+                e.Property(e => e.CorpoEmail)
                     .HasColumnName("Email")
                     .HasMaxLength(254)
                     .IsRequired();
-               
+                e.HasIndex(e=>e.CorpoEmail)
+                    .IsUnique();
+
             });
             builder.OwnsOne(c => c.Senha, s =>
             {
@@ -58,7 +62,7 @@ namespace Infraestrutura.EntityConfiguration
                     .HasMaxLength(100)
                     .IsRequired();
             });
-            builder.HasIndex("Email").IsUnique();
+            
 
         }
     }

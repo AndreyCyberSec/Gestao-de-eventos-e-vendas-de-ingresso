@@ -22,15 +22,18 @@ namespace Infraestrutura.EntityConfiguration
             {
                 p.Property(p => p.Valor)
                     .HasColumnName("Preco")
+                    .HasPrecision(18,2)
                     .IsRequired();
             });
             builder.Property(i => i.CodigoIngresso)
                     .IsRequired();
             builder.Property(i => i.TipoDeingresso)
-                    .HasConversion<int>()
+                    .HasConversion<string>()
+                    .HasMaxLength(15)
                     .IsRequired();
             builder.Property(i => i.Status)
-                    .HasConversion<int>()
+                    .HasConversion<string>()
+                    .HasMaxLength(20)
                     .IsRequired();
 
             builder.HasIndex(i => i.CodigoIngresso)

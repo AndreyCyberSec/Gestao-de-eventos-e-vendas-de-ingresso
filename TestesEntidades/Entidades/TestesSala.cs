@@ -38,7 +38,7 @@ namespace TestesUnitarios.Entidades
         public void TestarAdicionarCadeiraValida()
         {
             var sala =  Sala.CreateSala(4, 50);
-            var cadeira =  Cadeira.CreateCadeira(Guid.NewGuid(), "A1");
+            var cadeira =  Cadeira.CreateCadeira("A1", Guid.NewGuid());
             sala.AdicionarCadeira(cadeira);
             Assert.Contains(cadeira, sala.CadeirasDisponiveis);
         }
@@ -46,7 +46,7 @@ namespace TestesUnitarios.Entidades
         public void TestarAdicionarCadeiraDuplicada()
         {
             var sala =  Sala.CreateSala(5, 50);
-            var cadeira =  Cadeira.CreateCadeira(Guid.NewGuid(), "A1");
+            var cadeira =  Cadeira.CreateCadeira("A1", Guid.NewGuid());
             sala.AdicionarCadeira(cadeira);
             Assert.Throws<InvalidOperationException>(() => sala.AdicionarCadeira(cadeira));
         }
@@ -54,8 +54,8 @@ namespace TestesUnitarios.Entidades
         public void TestarAdicionarCadeiraComMesmoNumero()
         {
             var sala =  Sala.CreateSala(6, 50);
-            var cadeira1 =  Cadeira.CreateCadeira(Guid.NewGuid(), "A1");
-            var cadeira2 =  Cadeira.CreateCadeira(Guid.NewGuid(), "A1");
+            var cadeira1 =  Cadeira.CreateCadeira("A1", Guid.NewGuid());
+            var cadeira2 =  Cadeira.CreateCadeira("A1", Guid.NewGuid());
             sala.AdicionarCadeira(cadeira1);
             Assert.Throws<InvalidOperationException>(() => sala.AdicionarCadeira(cadeira2));
         }
@@ -63,7 +63,7 @@ namespace TestesUnitarios.Entidades
         public void TestarAdicionarEventoValido()
         {
             var sala =  Sala.CreateSala(7, 50);
-            var evento = Evento.CreateEvento("Evento Teste", "Rua Teste", "Cidade Teste", SiglaEstado.BA, "Brasil", new DateTime(2024, 6, 1), new DateTime(2024, 6, 3), "Descrição do evento teste");
+            var evento = Evento.CreateEvento(Guid.NewGuid(), "Evento Teste", "Rua Teste", "Cidade Teste", SiglaEstado.BA, "Brasil", new DateTime(2024, 6, 1), new DateTime(2024, 6, 3), "Descrição do evento teste");
             sala.AdicionarEvento(evento);
             Assert.Contains(evento, sala.Eventos);
         }
@@ -77,7 +77,7 @@ namespace TestesUnitarios.Entidades
         public void TestarAdicionarEventoDuplicado()
         {
             var sala =  Sala.CreateSala(9, 50);
-            var evento = Evento.CreateEvento("Evento Teste", "Rua Teste", "Cidade Teste", SiglaEstado.BA, "Brasil", new DateTime(2024, 6, 1), new DateTime(2024, 6, 3), "Descrição do evento teste");
+            var evento = Evento.CreateEvento(Guid.NewGuid(), "Evento Teste", "Rua Teste", "Cidade Teste", SiglaEstado.BA, "Brasil", new DateTime(2024, 6, 1), new DateTime(2024, 6, 3), "Descrição do evento teste");
             sala.AdicionarEvento(evento);
             Assert.Throws<InvalidOperationException>(() => sala.AdicionarEvento(evento));
         }

@@ -22,15 +22,18 @@ namespace Infraestrutura.EntityConfiguration
             {
                 v.Property(v => v.Valor)
                     .HasColumnName("Valor")
+                    .HasPrecision(18, 2)
                     .IsRequired();
             });
             builder.Property(builder => builder.DataPagamento)
                     .IsRequired();
             builder.Property(p => p.TipoPagamento)
-                    .HasConversion<int>()
+                    .HasConversion<string>()
+                    .HasMaxLength(25)
                     .IsRequired();
             builder.Property(p => p.Status)
-                    .HasConversion<int>()
+                    .HasConversion<string>()
+                    .HasMaxLength(20)
                     .IsRequired();
         }
     }
