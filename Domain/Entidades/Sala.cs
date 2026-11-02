@@ -14,7 +14,7 @@ namespace Domain.Entidades
         public int Capacidade { get; private set; } = 10;
         public List<Sessao> Sessoes { get; private set; } = new List<Sessao>();
         public List<Evento> Eventos { get; private set; } = new List<Evento>();
-        public List<Cadeiras> CadeirasDisponiveis { get; private set;} = new List<Cadeiras>();
+        public List<Cadeira> CadeirasDisponiveis { get; private set;} = new List<Cadeira>();
 
         public StatusSala Status { get; private set; } = StatusSala.Disponivel;
 
@@ -54,7 +54,7 @@ namespace Domain.Entidades
             NumeroSala = numeroSala;
         }
 
-        public void AdicionarCadeira(Cadeiras cadeira)
+        public void AdicionarCadeira(Cadeira cadeira)
         {
             if(cadeira == null)
             {

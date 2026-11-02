@@ -9,7 +9,7 @@ namespace TestesUnitarios.Entidades
 
         public void TestarCriacaoDeCadeira()
         {
-            var cadeira = Cadeiras.CreateCadeira(Guid.NewGuid(), "A1");
+            var cadeira = Cadeira.CreateCadeira(Guid.NewGuid(), "A1");
             Assert.NotNull(cadeira);
             Assert.Equal("A1", cadeira.NumeroCadeira);
             Assert.Equal(StatusCadeira.Disponivel, cadeira.Status);
@@ -18,14 +18,14 @@ namespace TestesUnitarios.Entidades
 
         public void TestarReservaDeCadeira()
         {
-            var cadeira = Cadeiras.CreateCadeira(Guid.NewGuid(), "A1");
+            var cadeira = Cadeira.CreateCadeira(Guid.NewGuid(), "A1");
             cadeira.ReservarCadeira();
             Assert.Equal(StatusCadeira.Indisponivel, cadeira.Status);
         }
         [Fact]
         public void TestarLiberacaoDeCadeira()
         {
-            var cadeira = Cadeiras.CreateCadeira(Guid.NewGuid(), "A1");
+            var cadeira = Cadeira.CreateCadeira(Guid.NewGuid(), "A1");
             cadeira.ReservarCadeira();
             if (cadeira.Status == StatusCadeira.Indisponivel) Console.WriteLine("Cadeira está reservada");
             cadeira.LiberarCadeira();
@@ -35,7 +35,7 @@ namespace TestesUnitarios.Entidades
         [Fact]
         public void TestarReservaDeCadeiraJaReservada()
         {
-            var cadeira = Cadeiras.CreateCadeira(Guid.NewGuid(), "A1");
+            var cadeira = Cadeira.CreateCadeira(Guid.NewGuid(), "A1");
             cadeira.ReservarCadeira();
             Assert.Throws<InvalidOperationException>(() =>
             { 

@@ -7,28 +7,28 @@ using System.Threading.Tasks;
 
 namespace Domain.Entidades
 {
-    public class Cadeiras
+    public class Cadeira
     {
         public Guid IdCadeira { get; private set; }
         public Guid IdSessao { get; private set; }
         public string NumeroCadeira { get; private set; }
         public StatusCadeira Status { get; private set; }
-        protected Cadeiras() { }
-        private Cadeiras(Guid idSessao, string numeroCadeira)
+        protected Cadeira() { }
+        private Cadeira(Guid idSessao, string numeroCadeira)
         {
             IdCadeira = Guid.NewGuid();
             IdSessao = idSessao;
             NumeroCadeira = numeroCadeira;
             Status = StatusCadeira.Disponivel;
         }
-        public static Cadeiras CreateCadeira(Guid idSessao, string numeroCadeira)
+        public static Cadeira CreateCadeira(Guid idSessao, string numeroCadeira)
         {
             if(string.IsNullOrEmpty(numeroCadeira))
             {
                 throw new ArgumentException("Número da cadeira não pode ser nulo ou vazio.");
             }
             
-            return new Cadeiras(idSessao, numeroCadeira);
+            return new Cadeira(idSessao, numeroCadeira);
            
         }
 

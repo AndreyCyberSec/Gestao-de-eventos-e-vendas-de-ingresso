@@ -38,7 +38,7 @@ namespace TestesUnitarios.Entidades
         public void TestarAdicionarCadeiraValida()
         {
             var sala =  Sala.CreateSala(4, 50);
-            var cadeira =  Cadeiras.CreateCadeira(Guid.NewGuid(), "A1");
+            var cadeira =  Cadeira.CreateCadeira(Guid.NewGuid(), "A1");
             sala.AdicionarCadeira(cadeira);
             Assert.Contains(cadeira, sala.CadeirasDisponiveis);
         }
@@ -46,7 +46,7 @@ namespace TestesUnitarios.Entidades
         public void TestarAdicionarCadeiraDuplicada()
         {
             var sala =  Sala.CreateSala(5, 50);
-            var cadeira =  Cadeiras.CreateCadeira(Guid.NewGuid(), "A1");
+            var cadeira =  Cadeira.CreateCadeira(Guid.NewGuid(), "A1");
             sala.AdicionarCadeira(cadeira);
             Assert.Throws<InvalidOperationException>(() => sala.AdicionarCadeira(cadeira));
         }
@@ -54,8 +54,8 @@ namespace TestesUnitarios.Entidades
         public void TestarAdicionarCadeiraComMesmoNumero()
         {
             var sala =  Sala.CreateSala(6, 50);
-            var cadeira1 =  Cadeiras.CreateCadeira(Guid.NewGuid(), "A1");
-            var cadeira2 =  Cadeiras.CreateCadeira(Guid.NewGuid(), "A1");
+            var cadeira1 =  Cadeira.CreateCadeira(Guid.NewGuid(), "A1");
+            var cadeira2 =  Cadeira.CreateCadeira(Guid.NewGuid(), "A1");
             sala.AdicionarCadeira(cadeira1);
             Assert.Throws<InvalidOperationException>(() => sala.AdicionarCadeira(cadeira2));
         }
