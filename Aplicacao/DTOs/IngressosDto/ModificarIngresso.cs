@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aplicacao.Interfaces.Services
+namespace Aplicacao.DTOs.IngressosDto
 {
-    internal interface ICadeiraService
+    public class ModificarIngresso
     {
+        public decimal Valor { get; set; }
     }
 }

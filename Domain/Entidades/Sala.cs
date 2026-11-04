@@ -36,6 +36,21 @@ namespace Domain.Entidades
             return new Sala(numeroSala, capacidade);
         }
 
+        private void GerarCadeirasAutomaticamente()
+        {
+            for (int i = 1; i <= Capacidade; i++)
+            {
+                string numeroCadeira = i.ToString("D2");
+
+                Cadeira cadeira = Cadeira.CreateCadeira(
+                    numeroCadeira,
+                    IdSala
+                );
+
+                CadeirasDisponiveis.Add(cadeira);
+            }
+        }
+
         public void RegrasCapacidade(int capacidade)
         {
             if (capacidade < 10 || capacidade > 100)

@@ -18,13 +18,4 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DTOs\CadeirasDto\" />
-    <Folder Include="DTOs\EventosDto\" />
-    <Folder Include="DTOs\IngressosDto\" />
-    <Folder Include="DTOs\PagamentosDto\" />
-    <Folder Include="DTOs\SessoesDto\" />
-    <Folder Include="DTOs\SalasDto\" />
-  </ItemGroup>
-
 </Project>
