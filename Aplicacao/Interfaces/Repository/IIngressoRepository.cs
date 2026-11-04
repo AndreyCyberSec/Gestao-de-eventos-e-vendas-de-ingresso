@@ -13,7 +13,11 @@ namespace Aplicacao.Interfaces.Repository
         Task<Ingresso?> ObterIngressoPorCodigoAsync(int codigoIngresso);
         Task<List<Ingresso>> ObterTodosIngressosAsync();
         Task AdicionarIngressoAsync(Ingresso ingresso);
-        Task AtualizarIngressoAsync(Ingresso ingresso);
-        Task RemoverIngressoAsync(Ingresso ingresso);
+        Task AtualizarIngresso(Ingresso ingresso);
+        Task RemoverIngresso(Ingresso ingresso);
+
+        Task<bool> PossuiPagamentoAsync(Guid idIngresso);
+
+        Task<bool> PossuiPagamentoPendenteAsync(Guid idIngresso);
     }
 }

@@ -10,7 +10,7 @@ namespace Aplicacao.Interfaces.Repository
     public interface ISalaRepository
     {
         Task<Sala?> ObterSalaPorIdAsync(Guid idSala);
-        Task<Sala?> ObterSalaPorNomeAsync(string nomeSala);
+        Task<Sala?> ObterSalaPorNumeroAsync(int numeroSala);
         Task<List<Sala>> ObterTodasSalasAsync();
         Task AdicionarSalaAsync(Sala sala);
         Task AtualizarSalaAsync(Sala sala);

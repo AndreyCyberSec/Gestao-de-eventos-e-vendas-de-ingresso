@@ -9,8 +9,11 @@ namespace Aplicacao.DTOs.PagamentosDto
 {
     public class RespostaPagamento
     {
+        public Guid IdPagamento { get; set; }
+        public Guid IdIngresso { get; set; }
         public decimal Valor { get; set; }
+        public string TipoPagamento { get; set; }
+        public string Status { get; set; }
         public DateTime DataPagamento { get; set; }
-        public MetodoPagamento MetodoPagamento { get; set; }
     }
 }

@@ -9,6 +9,7 @@ namespace Domain.Enum
     public enum StatusDoIngresso
     {
         Disponivel,
-        Indisponivel
+        Indisponivel,
+        Cancelado
     }
 }

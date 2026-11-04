@@ -10,6 +10,10 @@ namespace Aplicacao.Interfaces.Services
     public interface IPagamentoService
     {
         Task<RespostaPagamento> CadastrarPagamentoAsync(CadastrarPagamento pagamentoDto);
-      
+
+        Task<RespostaPagamento> AprovarPagamentoAsync(Guid idPagamento);
+
+        Task<RespostaPagamento> ReprovarPagamentoAsync(Guid idPagamento);
+
     }
 }

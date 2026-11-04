@@ -1,3 +1,5 @@
+using Aplicacao;
+using Infraestrutura;
 using Infraestrutura.EventDataBase;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +20,10 @@ builder.Services.AddDbContext<EventoDataBaseContext>(
     options =>
         options.UseSqlServer(connectionString)
 );
+
+//serviço de injeção de dependência para os repositórios e serviços
+builder.Services.AddAplicacao();
+builder.Services.AddInfraestrutura();
 
 var app = builder.Build();
 

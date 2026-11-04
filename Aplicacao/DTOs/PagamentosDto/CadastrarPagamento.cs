@@ -9,8 +9,7 @@ namespace Aplicacao.DTOs.PagamentosDto
 {
     public  class CadastrarPagamento
     {
-        public decimal Valor { get; set; }
-        public DateTime DataPagamento { get; set; }
+        public Guid IdIngresso { get; set; }
         public MetodoPagamento  MetodoPagamento { get; set; }
     }
 }

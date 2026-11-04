@@ -11,26 +11,31 @@ namespace Domain.Entidades
     public class Pagamento
     {
         public Guid IdPagamento { get; private set; }
+        public Guid Idingresso { get; private set; }
         public ObjectDinheiro  Valor { get; private set; }
         public DateTime DataPagamento { get; private set; } = DateTime.UtcNow;
         public MetodoPagamento TipoPagamento { get; private set; }
 
         public StatusPagamento Status { get; private set; }
+        public Ingresso Ingresso { get; private set; }
         protected Pagamento() { }
-        private Pagamento(ObjectDinheiro valor, MetodoPagamento tipoPagamento)
+        private Pagamento(Guid idIngresso, ObjectDinheiro valor, MetodoPagamento tipoPagamento)
         {
             IdPagamento = Guid.NewGuid();
+            Idingresso = idIngresso;
             Valor = valor;
             TipoPagamento = tipoPagamento;
             Status = StatusPagamento.Pendente;
             DataPagamento = DateTime.UtcNow;
 
         }
-        public static Pagamento CreatePagamento(decimal valor, MetodoPagamento tipoPagamento)
+        public static Pagamento CreatePagamento(Guid idIngresso, decimal valor, MetodoPagamento tipoPagamento)
         {
+            if (idIngresso == Guid.Empty)
+                throw new ArgumentException("Ingresso inválido.");
             var dinheiro = ObjectDinheiro.CreateValor(valor);
 
-            return new Pagamento(dinheiro, tipoPagamento);
+            return new Pagamento(idIngresso, dinheiro, tipoPagamento);
         }
 
         public void AprovarPagamento()

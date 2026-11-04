@@ -13,7 +13,7 @@ namespace Aplicacao.Interfaces.Repository
         Task<Pagamento?> ObterPagamentoPorDataAsync(DateTime dataPagamento);
         Task<List<Pagamento>> ObterTodosPagamentosAsync();
         Task AdicionarPagamentoAsync(Pagamento pagamento);
-        Task AtualizarPagamentoAsync(Pagamento pagamento);
-        Task RemoverPagamentoAsync(Pagamento pagamento);
+        Task AtualizarPagamento(Pagamento pagamento);
+        Task RemoverPagamento(Pagamento pagamento);
     }
 }

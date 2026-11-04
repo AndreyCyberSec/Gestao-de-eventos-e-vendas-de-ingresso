@@ -41,6 +41,19 @@ namespace Domain.Entidades
         {
             Status = StatusDoIngresso.Indisponivel;
         }
-        
+
+        public void CancelarIngresso()
+        {
+            if (Status == StatusDoIngresso.Cancelado)
+                throw new InvalidOperationException(
+                    "Este ingresso já está cancelado.");
+
+            if (Status == StatusDoIngresso.Indisponivel)
+                throw new InvalidOperationException(
+                    "Não é possível cancelar um ingresso que já foi vendido.");
+
+            Status = StatusDoIngresso.Cancelado;
+        }
+
     }
 }
