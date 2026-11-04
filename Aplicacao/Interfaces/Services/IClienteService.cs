@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aplicacao.DTOs.ClientesDto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace Aplicacao.Interfaces.Services
 {
-    internal interface IClienteService
+    public interface IClienteService
     {
+        Task<RespostaCliente> CadastrarClienteAsync(CadastrarCliente clienteDto);
+        Task<RespostaCliente> AtualizarClienteAsync(ModificarCliente clienteDto);
+
     }
 }
