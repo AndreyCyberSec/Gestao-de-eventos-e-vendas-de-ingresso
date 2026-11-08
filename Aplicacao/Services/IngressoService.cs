@@ -27,6 +27,7 @@ namespace Aplicacao.Services
                 throw new ArgumentException(
                     "Identificador do ingresso inválido.");
 
+
             if (ingressoDto == null)
                 throw new ArgumentNullException(nameof(ingressoDto));
 
@@ -59,6 +60,13 @@ namespace Aplicacao.Services
         {
             if (ingressoDto == null)
                 throw new ArgumentNullException(nameof(ingressoDto));
+
+            if (await _ingressoRepository.CodigoExistenteAsync(
+               ingressoDto.CodigoIngresso))
+            {
+                throw new InvalidOperationException(
+                    "Já existe um ingresso com esse código.");
+            }
 
             if (!Enum.IsDefined(ingressoDto.TipoDeIngresso))
                 throw new ArgumentException("Tipo de ingresso inválido.");
@@ -121,6 +129,14 @@ namespace Aplicacao.Services
             if (possuiPagamentoPendente)
                 throw new InvalidOperationException(
                     "Não é possível cancelar um ingresso com pagamento pendente.");
+
+            bool possuiPagamentoAprovado =
+               await _ingressoRepository.PossuiPagamentoAprovadoAsync(id);
+
+            if (possuiPagamentoAprovado)
+                throw new InvalidOperationException(
+                    "Não é possível cancelar diretamente um ingresso que já foi vendido.");
+
 
             ingresso.CancelarIngresso();
 

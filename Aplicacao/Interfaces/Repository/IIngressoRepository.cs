@@ -19,5 +19,8 @@ namespace Aplicacao.Interfaces.Repository
         Task<bool> PossuiPagamentoAsync(Guid idIngresso);
 
         Task<bool> PossuiPagamentoPendenteAsync(Guid idIngresso);
+
+        Task<bool> PossuiPagamentoAprovadoAsync(Guid idIngresso);
+        Task<bool> CodigoExistenteAsync(int codigoIngresso);
     }
 }

@@ -12,5 +12,7 @@ namespace Aplicacao.Interfaces.Services
         Task<RespostaCliente> CadastrarClienteAsync(CadastrarCliente clienteDto);
         Task<RespostaCliente> AtualizarClienteAsync(ModificarCliente clienteDto);
 
+        Task RemoverClienteAsync(Guid Id);
+
     }
 }

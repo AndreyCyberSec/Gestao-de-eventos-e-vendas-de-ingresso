@@ -31,6 +31,11 @@ namespace Infraestrutura.Repositories
             return Task.CompletedTask;
         }
 
+        public Task<bool> CodigoExistenteAsync(int codigoIngresso)
+        {
+            return _context.Ingressos.AnyAsync(i => i.CodigoIngresso == codigoIngresso);
+        }
+
         public async Task<Ingresso?> ObterIngressoPorCodigoAsync(int codigoIngresso)
         {
             return await _context.Ingressos.FirstOrDefaultAsync(i => i.CodigoIngresso == codigoIngresso);
@@ -44,6 +49,13 @@ namespace Infraestrutura.Repositories
         public async Task<List<Ingresso>> ObterTodosIngressosAsync()
         {
             return await _context.Ingressos.ToListAsync();
+        }
+
+        public async Task<bool> PossuiPagamentoAprovadoAsync(Guid idIngresso)
+        {
+           return await _context.Pagamentos.AnyAsync(p =>
+           p.Idingresso == idIngresso &&
+              p.Status == StatusPagamento.Aprovado);
         }
 
         public async Task<bool> PossuiPagamentoAsync(Guid idIngresso)
