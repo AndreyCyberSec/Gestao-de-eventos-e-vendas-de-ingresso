@@ -24,9 +24,6 @@ namespace Infraestrutura
             services.AddScoped<IIngressoRepository, IngressoRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            //service de senha hash
-            services.AddScoped<IServiceSenhaHash, BcryptServiceSenhaHash>();
-
             return services;
         }
     }

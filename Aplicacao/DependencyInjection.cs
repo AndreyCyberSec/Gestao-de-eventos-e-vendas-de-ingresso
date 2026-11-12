@@ -1,5 +1,7 @@
 ﻿using Aplicacao.Interfaces.Services;
 using Aplicacao.Services;
+using Infraestrutura.Interface.Senha;
+using Infraestrutura.ServiceHashSenha;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -15,6 +17,8 @@ namespace Aplicacao
         {
            services.AddScoped<IPagamentoService, PagamentoService>();
             services.AddScoped<IIngressoService, IngressoService>();
+            services.AddScoped<IClienteService, ClienteService>();
+            services.AddScoped<IServiceSenhaHash, BcryptServiceSenhaHash>();
             return services;
         }
     }

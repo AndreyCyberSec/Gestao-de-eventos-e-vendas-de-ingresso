@@ -24,10 +24,10 @@ namespace Infraestrutura.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task AtualizarClienteAsync(Cliente cliente)
+        public  Task AtualizarCliente(Cliente cliente)
         {
             _context.Clientes.Update(cliente);
-            await _context.SaveChangesAsync();
+            return Task.CompletedTask;
         }
 
         public async Task<Cliente?> ObterClientePorEmailAsync(string email)
@@ -45,10 +45,10 @@ namespace Infraestrutura.Repositories
             return await _context.Clientes.ToListAsync();
         }
 
-        public Task RemoverClienteAsync(Cliente cliente)
+        public Task RemoverCliente(Cliente cliente)
         {
             _context.Clientes.Remove(cliente);
-            return _context.SaveChangesAsync();
+            return Task.CompletedTask;
         }
     }
 }

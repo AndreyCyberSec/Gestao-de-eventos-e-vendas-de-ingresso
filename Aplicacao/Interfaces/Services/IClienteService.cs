@@ -10,7 +10,7 @@ namespace Aplicacao.Interfaces.Services
     public interface IClienteService
     {
         Task<RespostaCliente> CadastrarClienteAsync(CadastrarCliente clienteDto);
-        Task<RespostaCliente> AtualizarClienteAsync(ModificarCliente clienteDto);
+        Task<RespostaCliente> AtualizarClienteAsync(Guid id,ModificarCliente clienteDto);
 
         Task RemoverClienteAsync(Guid Id);
 

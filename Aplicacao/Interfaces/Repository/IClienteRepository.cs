@@ -13,7 +13,7 @@ namespace Aplicacao.Interfaces.Repository
         Task<Cliente?> ObterClientePorEmailAsync(string email);
         Task<List<Cliente>> ObterTodosClientesAsync();
         Task AdicionarClienteAsync(Cliente cliente);
-        Task AtualizarClienteAsync(Cliente cliente);
-        Task RemoverClienteAsync(Cliente cliente);
+        Task AtualizarCliente(Cliente cliente);
+        Task RemoverCliente(Cliente cliente);
     }
 }
