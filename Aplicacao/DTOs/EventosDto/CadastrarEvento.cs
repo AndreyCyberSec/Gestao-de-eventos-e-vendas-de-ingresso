@@ -10,6 +10,7 @@ namespace Aplicacao.DTOs.EventosDto
      
     public class CadastrarEvento
     {
+        public Guid IdSala { get; set; }
         public string NomeEvento { get; set; }
         public string EnderecoEvento { get; set; }
         public string CidadeEvento { get; set; }
