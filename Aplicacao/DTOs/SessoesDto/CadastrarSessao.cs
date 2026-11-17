@@ -8,6 +8,8 @@ namespace Aplicacao.DTOs.SessoesDto
 {
     public class CadastrarSessao
     {
+        public Guid IdEvento { get; set; }
+        public Guid IdSala {  get; set; }
         public DateTime InicioSessao { get; set; }
         public DateTime FimSessao { get; set; }
     }

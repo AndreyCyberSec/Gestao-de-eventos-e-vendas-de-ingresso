@@ -10,6 +10,11 @@ namespace Aplicacao.DTOs.SessoesDto
     {
         public DateTime InicioSessao { get; set; }
         public DateTime FimSessao { get; set; }
-        
+
+        public int Capacidade { get; set; }
+        public int QuantidadeReservada { get; set; }
+        public int LugaresDisponiveis { get; set; }
+        public bool EstaLotada { get; set; }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Domain.Enum;
 using Domain.ObjectValue.Evento;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace Domain.Entidades
         public StatusEvento StatusEvento { get; private set; }
 
         public List<Sessao> Sessoes { get; private set; } = new();
+        public List<Evento> Eventos { get; private set; } = new();
 
         protected Evento() { }
 
@@ -74,9 +76,33 @@ namespace Domain.Entidades
             StatusEvento = StatusEvento.Disponível;
         }
 
-        
+        public void AdicionarSessao(Sessao sessao)
+        {
+            if (sessao == null)
+            {
+                throw new ArgumentNullException(nameof(sessao), "A sessão não pode ser nula.");
+            }
+            if (Sessoes.Any(s => s.IdSessao == sessao.IdSessao))
+            {
+                throw new InvalidOperationException($"A sessão já está associada a esta sala.");
+            }
 
-        
+            bool sessaoConflitante = Sessoes.Any(s => (sessao.DataHoraInicio < s.DataHoraFim && sessao.DataHoraFim > s.DataHoraInicio));
+            if (sessaoConflitante)
+            {
+                throw new InvalidOperationException("A sessão conflita com outra sessão existente na sala.");
+            }
+            if (!Eventos.Any(e => e.IdEvento == sessao.IdEvento))
+            {
+                throw new InvalidOperationException(
+                    "Este evento não está associado a esta sala.");
+            }
+            Sessoes.Add(sessao);
+        }
+
+
+
+
 
 
     }

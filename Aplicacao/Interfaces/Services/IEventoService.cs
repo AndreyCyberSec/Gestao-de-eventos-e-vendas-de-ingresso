@@ -10,6 +10,6 @@ namespace Aplicacao.Interfaces.Services
      public  interface IEventoService
     {
         Task<RespostaEvento> CadastrarEventoAsync(CadastrarEvento eventoDto);
-        Task<RespostaEvento> AtualizarEventoAsync(ModificarEvento eventoDto);
+        Task<RespostaEvento> AtualizarEventoAsync(Guid id, ModificarEvento eventoDto);
     }
 }

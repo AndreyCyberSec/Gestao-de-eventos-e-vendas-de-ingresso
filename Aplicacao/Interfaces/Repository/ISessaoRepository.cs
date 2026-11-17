@@ -15,5 +15,7 @@ namespace Aplicacao.Interfaces.Repository
         Task AdicionarSessaoAsync(Sessao sessao);
         Task AtualizarSessaoAsync(Sessao sessao);
         Task RemoverSessaoAsync(Sessao sessao);
+
+        Task<int> ContarIngressosPorSessaoAsync(Guid idSessao);
     }
 }

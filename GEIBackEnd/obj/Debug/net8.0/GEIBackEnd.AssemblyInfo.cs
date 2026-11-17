@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GEIBackEnd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7af24d673fd99e8503314709750e674ae66b743")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3dec51e6d38bb9d1e5709fe0172bf9c8dfb72c7e")]
 [assembly: System.Reflection.AssemblyProductAttribute("GEIBackEnd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GEIBackEnd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

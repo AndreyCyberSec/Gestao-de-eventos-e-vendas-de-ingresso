@@ -29,11 +29,23 @@ namespace Domain.Entidades
             NumeroSala = numeroSala;
             Capacidade = capacidade;
             Status = StatusSala.Disponivel;
+
+            GerarCadeirasAutomaticamente();
         }
 
         public static Sala CreateSala(int numeroSala, int capacidade)
         {
             return new Sala(numeroSala, capacidade);
+        }
+
+        public void AtualizarSala(int capacidade)
+        {
+            if (capacidade < 10 || capacidade > 100)
+            {
+                throw new ArgumentException("A capacidade da sala deve ser entre 10 e 100.");
+            }
+
+            Capacidade = capacidade;
         }
 
         private void GerarCadeirasAutomaticamente()
@@ -128,9 +140,19 @@ namespace Domain.Entidades
         }
 
 
-        public void AlterarStatusSala()
+        public void TornarIndisponivel()
         {
             Status = StatusSala.Indisponivel;
+        }
+
+        public void TornarDisponivel()
+        {
+            Status = StatusSala.Disponivel;
+        }
+
+        public bool EstaLotada()
+        {
+            return CadeirasDisponiveis.All(c => c.Status != StatusCadeira.Disponivel);
         }
 
     }

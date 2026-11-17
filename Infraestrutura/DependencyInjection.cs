@@ -2,7 +2,6 @@
 using Infraestrutura.EventDataBase;
 using Infraestrutura.Interface.Senha;
 using Infraestrutura.Repositories;
-using Infraestrutura.ServiceHashSenha;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;

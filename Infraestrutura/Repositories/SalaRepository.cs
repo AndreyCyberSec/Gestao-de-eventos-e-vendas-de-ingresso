@@ -1,5 +1,6 @@
 ﻿using Aplicacao.Interfaces.Repository;
 using Domain.Entidades;
+using Domain.Enum;
 using Infraestrutura.EventDataBase;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -43,6 +44,16 @@ namespace Infraestrutura.Repositories
         {
             return await _context.Salas.FirstOrDefaultAsync(n=> n.NumeroSala == numeroSala);
 
+        }
+
+        public async Task<Sala?> ObterStatusSalaDisponivelAsync(StatusSala status = StatusSala.Disponivel)
+        {
+            return await _context.Salas.FirstOrDefaultAsync(s => s.Status == status );
+        }
+
+        public async Task<Sala?> ObterStatusSalaIndisponivelAsync(StatusSala status = StatusSala.Indisponivel)
+        {
+            return await _context.Salas.FirstOrDefaultAsync(s=>s.Status == status );
         }
 
         public async Task<List<Sala>> ObterTodasSalasAsync()

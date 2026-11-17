@@ -1,13 +1,14 @@
-﻿using Infraestrutura.Interface.Senha;
+﻿using Aplicacao.Interfaces.Services;
+using Infraestrutura.Interface.Senha;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infraestrutura.ServiceHashSenha
+namespace Aplicacao.Services
 {
-    public class BcryptServiceSenhaHash : IServiceSenhaHash
+    public class BcryptServiceSenhaHash : ISenhaHash
     {
         public string GerarHash(string senha)
         {

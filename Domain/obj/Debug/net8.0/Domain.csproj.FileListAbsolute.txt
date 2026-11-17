@@ -12,3 +12,4 @@ C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Domain\obj\Debug\net8.0\Domain.pd
 C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Domain\obj\Debug\net8.0\ref\Domain.dll
 C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Domain\bin\Debug\net8.0\Domain.runtimeconfig.json
 C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Domain\obj\Debug\net8.0\Domain.genruntimeconfig.cache
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache

@@ -12,3 +12,4 @@ C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\refint
 C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\Aplicacao.pdb
 C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\Aplicacao.genruntimeconfig.cache
 C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\ref\Aplicacao.dll
+C:\Users\andre\OneDrive\Documentos\GEI\BackEnd\Aplicacao\obj\Debug\net8.0\Aplicacao.csproj.AssemblyReference.cache

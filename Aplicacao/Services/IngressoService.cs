@@ -14,11 +14,13 @@ namespace Aplicacao.Services
     public class IngressoService : IIngressoService
     {
         private readonly IIngressoRepository _ingressoRepository;
+        private readonly ISessaoRepository _sessaoRepository;
         private readonly IUnitOfWork _unitOfWork;
         
-        public IngressoService(IIngressoRepository ingressoRepository, IUnitOfWork unitOfWork)
+        public IngressoService(IIngressoRepository ingressoRepository,ISessaoRepository sessaoRepository, IUnitOfWork unitOfWork)
         {
             _ingressoRepository = ingressoRepository;
+            _sessaoRepository = sessaoRepository;
             _unitOfWork = unitOfWork;
         }
         public async Task<RespostaIngresso> AtualizarIngressoAsync(Guid Id,ModificarIngresso ingressoDto)
@@ -71,7 +73,10 @@ namespace Aplicacao.Services
             if (!Enum.IsDefined(ingressoDto.TipoDeIngresso))
                 throw new ArgumentException("Tipo de ingresso inválido.");
 
+            var sessao = await _sessaoRepository.ObterSessaoPorIdAsync(ingressoDto.IdSessao);
+
             var ingresso = Ingresso.CreateIngresso(
+                sessao.IdSessao,
                 ingressoDto.Valor,
                 ingressoDto.CodigoIngresso,
                 ingressoDto.TipoDeIngresso

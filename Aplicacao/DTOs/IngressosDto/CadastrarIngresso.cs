@@ -9,6 +9,7 @@ namespace Aplicacao.DTOs.IngressosDto
 {
     public class CadastrarIngresso
     {
+        public Guid IdSessao {  get; set; }
         public decimal Valor { get; set; }
         public int CodigoIngresso { get; set; }
         public TipoDeIngresso TipoDeIngresso { get; set; }

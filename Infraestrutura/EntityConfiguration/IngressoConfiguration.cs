@@ -36,6 +36,11 @@ namespace Infraestrutura.EntityConfiguration
                     .HasMaxLength(20)
                     .IsRequired();
 
+            builder.HasOne(i => i.Sessao)
+    .WithMany()
+    .HasForeignKey(i => i.IdSessao)
+    .OnDelete(DeleteBehavior.Restrict);
+
             builder.HasIndex(i => i.CodigoIngresso)
                     .IsUnique();
         }

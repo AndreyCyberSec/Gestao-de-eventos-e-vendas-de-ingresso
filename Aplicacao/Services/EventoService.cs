@@ -22,9 +22,37 @@ namespace Aplicacao.Services
             _salaRepository = salaRepository;
             _unitOfWork = unitOfWork;
         }
-        public Task<RespostaEvento> AtualizarEventoAsync(ModificarEvento eventoDto)
+        public async Task<RespostaEvento> AtualizarEventoAsync(Guid id, ModificarEvento eventoDto)
         {
-            throw new NotImplementedException();
+            if(eventoDto == null)
+            {
+                throw new ArgumentNullException(nameof(eventoDto));
+            }
+            if(id == Guid.Empty)
+            {
+                throw new ArgumentException("O ID do evento não pode ser vazio.", nameof(id));
+            }
+            var eventoExistente = await _eventoRepository.ObterEventoPorIdAsync(id);
+            if(eventoExistente == null)
+            {
+                throw new InvalidOperationException($"Evento com ID {id} não encontrado.");
+            }
+            var nomeEventoValido = ObejctNomeEvento.CreateNomeEvento(eventoDto.NomeEvento);
+            var localEvento = ObjectLocalEvento.CreateLocalEvento(eventoDto.EnderecoEvento, eventoDto.CidadeEvento, eventoDto.EstadoEvento, eventoDto.PaisEvento);
+            var descricaoDoEvento = ObjectDescricaoEvento.CreateDescricaoEvento(eventoDto.DescricaoEvento);
+            eventoExistente.AtualizarEvento(
+                nomeEventoValido.NomeEvento,
+                localEvento.Endereco,
+                localEvento.Cidade,
+                localEvento.Estado,
+                localEvento.Pais,
+                eventoDto.InicioEvento,
+                eventoDto.FimEvento,
+                descricaoDoEvento.Descricao
+            );
+            await _eventoRepository.AtualizarEventoAsync(eventoExistente);
+            await _unitOfWork.CommitAsync();
+            return MapearEvento(eventoExistente);
         }
 
         public async Task<RespostaEvento> CadastrarEventoAsync(CadastrarEvento eventoDto)
@@ -58,6 +86,10 @@ namespace Aplicacao.Services
                 throw new ArgumentException("A descrição do evento não pode ser nula ou vazia.", nameof(eventoDto.DescricaoEvento));
             }
             var sala = await _salaRepository.ObterSalaPorIdAsync(eventoDto.IdSala);
+            if (sala == null)
+            {
+                throw new Exception("Sala está vazia");
+            }
             var momeEvento = ObejctNomeEvento.CreateNomeEvento(eventoDto.NomeEvento);
             var enderecoEvento = ObjectLocalEvento.CreateLocalEvento(eventoDto.EnderecoEvento, eventoDto.CidadeEvento, eventoDto.EstadoEvento, eventoDto.PaisEvento);
             var descricaoEvento = ObjectDescricaoEvento.CreateDescricaoEvento(eventoDto.DescricaoEvento);
@@ -72,8 +104,8 @@ namespace Aplicacao.Services
                 eventoDto.FimEvento,
                 descricaoEvento.Descricao
                 );
-
-            await _eventoRepository.AdicionarEventoAsync(evento);
+            sala.AdicionarEvento(evento);
+             _eventoRepository.AdicionarEventoAsync(evento);
             await _unitOfWork.CommitAsync();
             return MapearEvento(evento);
         }
